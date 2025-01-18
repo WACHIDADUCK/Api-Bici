@@ -48,7 +48,7 @@ const options = {
     },
     servers: [
       {
-        url: "https://api-bici-1.onrender.com/",
+        url: "https://api-bici-1.onrender.com",
       },
     ],
     components: {
@@ -102,60 +102,9 @@ app.use(
 
 
 
-/**
- * @swagger
- * /:
- *   get:
- *     summary: Obtiene la página de inicio
- *     description: Obtiene la página de inicio de la aplicación
- *     responses:
- *       200:
- *         description: Página de inicio
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *                   description: Mensaje de respuesta
- */
+
 app.use('/', indexRouter);
-
-/**
- * @swagger
- * /users:
- *   get:
- *     summary: Obtiene una lista de usuarios
- *     description: Obtiene una lista de usuarios
- *     responses:
- *       200:
- *         description: Lista de usuarios
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/components/schemas/User'
- */
 app.use('/users', usersRouter);
-
-/**
- * @swagger
- * /api/bicicletas:
- *   get:
- *     summary: Obtiene una lista de bicicletas
- *     description: Obtiene una lista de bicicletas
- *     responses:
- *       200:
- *         description: Lista de bicicletas
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/components/schemas/Bicicleta'
- */
 app.use('/api/bicicletas', bicicletasAPIRouter);
 
 // catch 404 and forward to error handler

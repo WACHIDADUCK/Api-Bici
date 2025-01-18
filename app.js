@@ -32,7 +32,7 @@ const options = {
   definition: {
     openapi: "3.1.0",
     info: {
-      title: "Api Bicicletas 2",
+      title: "Api Bicicletas Activando hook",
       version: "0.1.0",
       description:
         "This is a simple CRUD API application made with Express and documented with Swagger",

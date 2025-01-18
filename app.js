@@ -32,7 +32,7 @@ const options = {
   definition: {
     openapi: "3.1.0",
     info: {
-      title: "Api Bicicletas Activando hook",
+      title: "Api Bicicletas",
       version: "0.1.0",
       description:
         "This is a simple CRUD API application made with Express and documented with Swagger",
@@ -99,8 +99,6 @@ app.use(
   swaggerUi.serve,
   swaggerUi.setup(specs)
 );
-
-
 
 
 app.use('/', indexRouter);

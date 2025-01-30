@@ -19,6 +19,8 @@ let Bicicleta = require("../../models/Bicicleta");
  *                 $ref: '#/components/schemas/Bicicleta'
  */
 exports.bicicleta_list = function(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.status(200).json ({
         bicicletas: Bicicleta.allBicis
     });    
